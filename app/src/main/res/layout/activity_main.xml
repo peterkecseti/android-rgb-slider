@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/RelativeLayout"
+    android:gravity="top">
+
+    <!--
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/SliderColorR"
+        android:valueFrom="0"
+        android:valueTo="255"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/SliderColorG"
+        android:layout_below="@+id/SliderColorR"
+        android:valueFrom="0"
+        android:valueTo="255"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/SliderColorB"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SliderColorG"
+        android:valueFrom="0"
+        android:valueTo="255"
+        />
+
+<!-- Color values out -->
+    <TextView
+        android:id="@+id/TextViewRGB"
+        android:layout_width="wrap_content"
+        android:layout_height="50pt"
+        android:layout_below="@+id/SliderColorB"
+        android:text="Red: \nGreen: \nBlue: "
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/ColorRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/TextViewRGB"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:text="RGB"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
